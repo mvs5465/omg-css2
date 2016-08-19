@@ -237,7 +237,7 @@ img {
     position: inherit;
     padding-bottom: 8px;
     padding-top: 8px;
-    border: none;
+    border: #353535;
 }
 
 .btn-default:focus, 
@@ -248,6 +248,29 @@ img {
 .open > .dropdown-toggle.btn-default {
     background: rgba(0, 0, 0, 0.85);
     color: white;
+    box-shadow: none;
+    outline: 0 none;
+}
+.btn-white{
+    background-color: white;
+    color: #353535;
+    border-radius: 0;
+    border: 1px solid #CACACA;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    position: inherit;
+    padding-bottom: 8px;
+    margin-left: 5px;
+}
+
+.btn-white:focus, 
+.btn-white:active, 
+.btn-white:hover, 
+.btn-whitet.active, 
+.btn-white.active, 
+.open > .dropdown-toggle.btn-default {
+    background: #EEEEEE;
+    color: #353535;
     box-shadow: none;
     outline: 0 none;
 }
@@ -264,4 +287,17 @@ nav a:hover{
     text-decoration: underline;
     color: #47aaa8;
     font-weight: 500;
+}
+
+/* Log In */
+.panel-default{
+    width: 40%;
+    text-align: left;
+    font-weight: 500;
+    padding-bottom: 0;
+}
+
+.panel-default>.panel-heading{
+    background-color: #353535 !important;
+    color: whitesmoke;
 }
