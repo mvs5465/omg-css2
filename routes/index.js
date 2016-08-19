@@ -14,12 +14,12 @@ router.get('/', function(req,res) {
 // When the browser requests the login page
 // render the login page
 router.get('/login', function(req,res) {
-  res.render('LoginPage');
+  res.render('login');
 });
 
 // Render the judging panel page
 router.get('/judging', function(req,res) {
-  res.render('JudgingPanel');
+  res.render('judging');
 });
 
 // Handler for judging criteria
