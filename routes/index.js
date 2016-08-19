@@ -37,6 +37,16 @@ router.get('/scores', function(req,res) {
   res.render('scores');
 });
 
+// Render the participant scoreboard page
+router.get('/participants_scoreboard', function(req,res) {
+  res.render('participants_scoreboard');
+});
+
+// Render the judges scoreboard page
+router.get('/judges_scoreboard', function(req,res) {
+  res.render('judges_scoreboard');
+});
+
 // Handler for judging criteria
 router.get('/c/:criteriaName', function(req,res) {
   var criteriaName = req.params.criteriaName;
