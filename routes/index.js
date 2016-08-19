@@ -14,12 +14,27 @@ router.get('/', function(req,res) {
 // When the browser requests the login page
 // render the login page
 router.get('/login', function(req,res) {
-  res.render('LoginPage');
+  res.render('login');
 });
 
 // Render the judging panel page
 router.get('/judging', function(req,res) {
-  res.render('JudgingPanel');
+  res.render('judging');
+});
+
+// Render the signup page
+router.get('/signup', function(req,res) {
+  res.render('signup');
+});
+
+// Render the scoreboard page
+router.get('/scoreboard', function(req,res) {
+  res.render('scoreboard');
+});
+
+// Render the scores page
+router.get('/scores', function(req,res) {
+  res.render('scores');
 });
 
 // Handler for judging criteria

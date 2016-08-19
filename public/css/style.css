@@ -1,98 +1,267 @@
-body{
+body {
     background-color: #EEEEEE;
 }
-#headline{
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    z-index: 999;
     background-color: #353535;
-    padding: 4%;
     color: #47AAA8;
     text-align: center;
-    margin-bottom: 20px;
+    
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    -o-transition: height 0.5s;
+    transition: height 0.5s;
+    
+    -webkit-box-shadow: 0 6px 4px -4px grey;
+    -moz-box-shadow: 0 6px 4px -4px grey;
+    box-shadow: 0 6px 4px -4px grey;
 }
 
-#headline h1{
+header.smaller {
+    height: 100px;
+}
+
+header h1 {
+    display: inline-block;
     font-size: 36pt;
+    line-height: 100px;
+    height: 100px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
-#headline p{
+header.smaller h1 {
+    height: 30px;
+    line-height: 30px;
+    font-size: 25px;
+}
+
+header p {
     font-size: 14pt;
+    line-height: 3px;
+    height: 3px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
-.menu-panel{
-    width: 75%;
+header.smaller p {
+    height: 10px;
+    line-height: 10px;
+    font-size: 12px;
+}
+
+@media all and (max-width: 510px) {
+    header h1 {
+        display: inline-block;
+        font-size: 30pt;
+        line-height: 55px;
+        height: 100px;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    
+    header p {
+        font-size: 12pt;
+        line-height: 50px;
+        height: 3px;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+}
+
+.container-fluid {
+    padding-top: 220px;
+}
+
+.menu-panel {
+    width: 80%;
     background-color: white;
     display: block;
     position: relative;
-    padding-bottom: 75%;
+    padding-bottom: 80%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15px;
-    cursor: pointer;
-    color: #353535;
     transition: all .2s ease-in-out;
 }
 
-.menu-panel:hover{
+.menu-panel:hover {
     text-decoration: none;
     color: inherit;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transform: scale(1.02);
 }
 
-.menu-panel:hover img{
-    -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+.menu-panel:hover img {
+    -webkit-filter: grayscale(0%);
     filter: grayscale(100%);
 }
 
-.menu-panel:before{
+.menu-panel:before {
     display: block;
 }
-.content{
-    position:absolute;
+
+.content {
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
 }
 
-.content div{
-/*    display: table;*/
+.content div {
+    /*    display: table;*/
     width: 100%;
     height: 100%;
 }
 
 .content h4 {
-/*    display: table-cell;*/
     text-align: center;
     width: 100%;
-/*    vertical-align: middle;*/
+    margin-top: 20%;
+    color: #6E6E6E;
+    transition: all .2s;
 }
 
-.content p{
-    font-weight: 0;
+.content p {
+    display: none;
 }
 
-img{
-    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+.menu-panel:hover h4 {
+    transform: translate(0,-22px);
+    -webkit-transform: translate(0,-22px);
+    -o-transform: translate(0,-22px); 
+    -moz-transform: translate(0,-22px);
+}
+.menu-panel:hover p {
+    text-align: center;
+    width: 100%;
+    display: block;
+    position: fixed;
+    margin-top: -22px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-color: #353535;
+    color: #999999;
+    font-size: 14px;
+}
+
+img {
+    -webkit-filter: grayscale(100%);
+    /* Chrome, Safari, Opera */
     filter: grayscale(100%);
 }
 
-#judge{
+.menu-pic {
     margin-top: 0px;
     width: 100%;
 }
 
-#setup{
+#setup {
     text-align: right;
     margin-right: 2.5%;
 }
 
-#setup .glyphicon{
-    color:#47AAA8;
+#setup .glyphicon {
+    color: #47AAA8;
 }
 
-#setup a{
+#setup a {
     color: #353535;
     text-decoration: none;
     cursor: pointer;
     font-weight: 400;
+}
+
+#setup a:hover{
+    font-weight: 500;
+}
+
+#setup .glyphicon:hover {
+    color: #358483;
+}
+
+/* judging.html*/
+.btn-default:focus,
+.btn-default:active,
+.btn-default:hover,
+.btn-default.active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    box-shadow: none;
+    outline: 0 none;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    background-color: #FF0000;
+}
+
+.btn-default {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    border-radius: 0;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    position: inherit;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border: none;
+}
+
+.btn-default {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    border-radius: 0;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    position: inherit;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border: none;
+}
+
+.btn-default:focus, 
+.btn-default:active, 
+.btn-default:hover, 
+.btn-default.active, 
+.btn-default.active, 
+.open > .dropdown-toggle.btn-default {
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    box-shadow: none;
+    outline: 0 none;
+}
+
+nav a{
+    padding: 5px;
+    color: #47aaa8;
+    font-size: 16px;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    color: #47aaa8;
+    font-weight: 500;
 }
