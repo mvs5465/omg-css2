@@ -11,10 +11,28 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/classie.js"></script>
   <link href="css/style.css" rel="stylesheet" type="text/css">
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="res/bootstrap.min.js"></script>
-
+    <script>
+        function init() {
+            window.addEventListener('scroll', function(e){
+                console.log('scroll');
+                var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                    shrinkOn = 100,
+                    header = document.querySelector("header");
+                if (distanceY > shrinkOn) {
+                    classie.add(header,"smaller");
+                } else {
+                    if (classie.has(header,"smaller")) {
+                        classie.remove(header,"smaller");
+                    }
+                }
+            });
+        }
+        window.onload = init();
+    </script>
 
   <!-- Supporting script files -->
   <script src="js/judging.js"></script>
@@ -28,6 +46,13 @@
 
 </head>
 <body>
+        <header>
+            <!--        <p class="glyphicon glyphicon-user"></p>-->
+            <div class="container clearfix">
+                <h1>New Hire Hackathon</h1>
+                <nav> <a href="/">Home</a> <span>|</span> <a href="judging"> Judge</a> <span>|</span> <a href="scoreboard"> Scoreboard</a> <span>|</span> <a href="#"> Team</a> </nav>
+            </div>
+    </header>
   <div class="container-fluid">
     <div class="row" id="headline">
       <div class="col-sm-12">
