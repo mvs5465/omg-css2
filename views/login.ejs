@@ -1,55 +1,72 @@
 <html>
-    <center>
-
+<center>
     <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Login Page</title>
-
+        <title>Log In</title>
         <!-- Bootstrap CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
-
         <!-- Script file for this page -->
         <script src="login.js"></script>
+        <script src="js/classie.js"></script>
+        <script>
+            function init() {
+                window.addEventListener('scroll', function (e) {
+                    console.log('scroll');
+                    var distanceY = window.pageYOffset || document.documentElement.scrollTop
+                        , shrinkOn = 100
+                        , header = document.querySelector("header");
+                    if (distanceY > shrinkOn) {
+                        classie.add(header, "smaller");
+                    }
+                    else {
+                        if (classie.has(header, "smaller")) {
+                            classie.remove(header, "smaller");
+                        }
+                    }
+                });
+            }
+            window.onload = init();
+        </script>
     </head>
 
-
     <body>
-            <div class="container-fluid">
-                <div class="row" id="headline">
-                <div class="col-sm-12">
+        <header>
+            <!--        <p class="glyphicon glyphicon-user"></p>-->
+            <div class="container clearfix">
                 <h1>New Hire Hackathon</h1>
-                <p>Scoring for Judges App</p>
+                <nav> <a href="/">Home</a> <span>|</span> <a href="judging"> Judge</a> <span>|</span> <a href="scoreboard"> Scoreboard</a> <span>|</span> <a href="#"> Team</a> </nav>
+            </div>
+        </header>
+        <div class="container-fluid">
+            <div class="panel panel-default" style="margin-top: 20px;">
+                <div class="panel-heading">Log In</div>
+                <div class="panel-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"> </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> </div>
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-default">Log In</button> <span>
+                            <a href="signup" class="btn btn-white" role="button">Sign Up
+                            </a>
+                        </span> </div>
+                    </form>
                 </div>
-                </div>
-            <h1>Scoreboard Portal Login</h1>
-            <section class="loginform cf">
-            <form>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" style="width:25%" id="exampleInputEmail1" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" style="width:25%" id="exampleInputPassword1" placeholder="Password">
-              </div>
-              <!--button type="submit" class="btn btn-default">Submit</button-->
-              <button id="submitbutton" class="btn btn-default">Submit</button>
-            </form>
-            </section>
+            </div>
         </div>
-
     </body>
-
-    </center>
+</center>
 
 </html>
