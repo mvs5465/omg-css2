@@ -1,0 +1,98 @@
+body{
+    background-color: #EEEEEE;
+}
+#headline{
+    background-color: #353535;
+    padding: 4%;
+    color: #47AAA8;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#headline h1{
+    font-size: 36pt;
+}
+
+#headline p{
+    font-size: 14pt;
+}
+
+.menu-panel{
+    width: 75%;
+    background-color: white;
+    display: block;
+    position: relative;
+    padding-bottom: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: #353535;
+    transition: all .2s ease-in-out;
+}
+
+.menu-panel:hover{
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: scale(1.02);
+}
+
+.menu-panel:hover img{
+    -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+}
+
+.menu-panel:before{
+    display: block;
+}
+.content{
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.content div{
+/*    display: table;*/
+    width: 100%;
+    height: 100%;
+}
+
+.content h4 {
+/*    display: table-cell;*/
+    text-align: center;
+    width: 100%;
+/*    vertical-align: middle;*/
+}
+
+.content p{
+    font-weight: 0;
+}
+
+img{
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+}
+
+#judge{
+    margin-top: 0px;
+    width: 100%;
+}
+
+#setup{
+    text-align: right;
+    margin-right: 2.5%;
+}
+
+#setup .glyphicon{
+    color:#47AAA8;
+}
+
+#setup a{
+    color: #353535;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 400;
+}

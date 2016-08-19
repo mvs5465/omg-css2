@@ -1,0 +1,25 @@
+{
+  "name": "omg-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sethi-gurkiran/omg-css.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sethi-gurkiran/omg-css/issues"
+  },
+  "homepage": "https://github.com/sethi-gurkiran/omg-css#readme",
+  "dependencies": {
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.9",
+    "node-sass": "^3.8.0"
+  }
+}

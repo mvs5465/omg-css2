@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Judging Panel</title>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="res/bootstrap.min.js"></script>
+
+
+  <!-- Supporting script files -->
+  <script src="js/judging.js"></script>
+
+  <!-- Local css formatting for criteria table -->
+  <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row" id="headline">
+      <div class="col-sm-12">
+        <h1>New Hire Hackathon</h1>
+        <p>Scoring for Judges App</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="dropdown">
+          <ul class="nav nav-pills left">
+            <li class="dropdown active span8">
+              <a class="dropdown-toggle" id="inp_impact" data-toggle="dropdown">
+                <i class="icon icon-envelope icon-white"></i>
+                <span id="text">Select Team</span><span class="caret"></span>
+              </a>
+              <ul ID="teamdropdown" class="dropdown-menu">
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="dropdown">
+          <ul class="nav nav-pills left">
+            <li class="dropdown active span8">
+              <a class="dropdown-toggle" id="inp_impact" data-toggle="dropdown">
+                <i class="icon icon-envelope icon-white"></i>
+                <span id="categorytext">Functionality</span><span class="caret"></span>
+              </a>
+              <ul ID="categorydropdown" class="dropdown-menu">
+                <li><a>Functionality</a></li>
+                <li><a>UI/UX</a></li>
+                <li><a>Agile Methodology</a></li>
+                <li><a>DevOps</a></li>
+                <li><a>Testing</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div id="criteriadiv" class="col-sm-12">
+        <p>placeholder</p>
+      </div>
+    </div>
+    <div class="row" id="ratingdiv">
+      <div class="col-sm-5">
+        <h2> Please enter your rating: </h2>
+      </div>
+      <div class="col-sm-7">
+        <div class="dropdown">
+          <ul class="nav nav-pills left">
+            <li class="dropdown active span8">
+              <a class="dropdown-toggle" id="inp_impact" data-toggle="dropdown">
+                <i class="icon icon-envelope icon-white"></i>
+                <span id="ratingtext">5</span><span class="caret"></span>
+              </a>
+              <ul ID="ratingdropdown" class="dropdown-menu">
+                <li><a>5</a></li>
+                <li><a>4</a></li>
+                <li><a>3</a></li>
+                <li><a>2</a></li>
+                <li><a>1</a></li>
+                <li><a>0</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label for="comment">Comments:</label>
+          <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
