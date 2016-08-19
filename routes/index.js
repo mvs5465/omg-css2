@@ -29,7 +29,7 @@ router.get('/signup', function(req,res) {
 
 // Render the scoreboard page
 router.get('/scoreboard', function(req,res) {
-  res.render('scoreboard');
+  res.render('judges_scoreboard');
 });
 
 // Render the scores page
