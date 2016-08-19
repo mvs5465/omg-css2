@@ -22,6 +22,21 @@ router.get('/judging', function(req,res) {
   res.render('judging');
 });
 
+// Render the signup page
+router.get('/signup', function(req,res) {
+  res.render('signup');
+});
+
+// Render the scoreboard page
+router.get('/scoreboard', function(req,res) {
+  res.render('scoreboard');
+});
+
+// Render the scores page
+router.get('/scores', function(req,res) {
+  res.render('scores');
+});
+
 // Handler for judging criteria
 router.get('/c/:criteriaName', function(req,res) {
   var criteriaName = req.params.criteriaName;
